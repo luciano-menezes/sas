@@ -53,15 +53,15 @@ require_once(SHARED_PATH . '/salamander-header.php');
   </tr>
 
       <?php foreach($salamanders as $salamander) { ?>
-        <tr>
-          <!------------------------------------------------------------------
+        <!------------------------------------------------------------------
         Add the table data for the
         row 1: salamander id
         row 2: salamander name
         rows 3, 4, and 5 are already done for you.
         
         You will need to reference the salamander id and name from the salamanders array
-      ------------------------------------------------------------------>
+        ------------------------------------------------------------------>
+        <tr>
           <td><?php echo $salamander['id']; ?></td>
     	    <td><?php echo $salamander['salamanderName']; ?></td>
           <td><a class="action" href="<?= url_for('salamanders/show.php?id=' . h(u($salamander['id']))); ?>">View</a></td>
