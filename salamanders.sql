@@ -22,5 +22,5 @@ ALTER TABLE `salamander`
   ADD PRIMARY KEY (`id`);
 
 -- Create a user named sally and grant that user all privileges
-GRANT ALL PRIVILEGES ON salamanders.* TO 'sally'@'localhost' IDENTIFIED BY 'somepa55word';;
+GRANT ALL PRIVILEGES ON salamanders.* TO 'sally'@'localhost' IDENTIFIED BY 'somePa55word';
 FLUSH PRIVILEGES;
