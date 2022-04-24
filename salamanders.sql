@@ -1,5 +1,4 @@
-CREATE DATABASE IF NOT EXISTS salamanders;
-USE salamanders;
+
 DROP TABLE IF EXISTS salamander;
 CREATE TABLE `salamander` (
   `id` int(11) NOT NULL,
@@ -22,5 +21,3 @@ ALTER TABLE `salamander`
   ADD PRIMARY KEY (`id`);
 
 -- Create a user named sally and grant that user all privileges
-GRANT ALL PRIVILEGES ON salamanders.* TO 'sally'@'localhost' IDENTIFIED BY 'somePa55word';
-FLUSH PRIVILEGES;
