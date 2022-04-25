@@ -26,9 +26,9 @@ function confirm_db_connect()
     }
 }
 
-function confirm_result_set($resultSet, $sql)
+function confirm_result_set($resultSet)
 {
     if (!$resultSet) {
-        exit("Database query failed. The SQL is: $sql");
+        exit("Database query failed.");
     }
 }

@@ -1,9 +1,18 @@
 <?php
 
 require_once('../../private/initialize.php');
-include(SHARED_PATH . '/salamander-header.php'); 
+include(SHARED_PATH . '/salamander-header.php');
 
-echo "<h1>Stub for Create Salamander</h1>";
+if (is_post_request()) {
 
-include(SHARED_PATH . '/salamander-footer.php'); 
-?>
+  $salamander = [];
+  $salamander['name'] = $_POST['name'] ?? '';
+  $salamander['habitat'] = $_POST['habitat'] ?? '';
+  $salamander['description'] = $_POST['description'];
+
+  $result = insert_salamander($salamander);
+  $newID = mysqli_insert_id($db);
+  redirect_to(url_for('salamanders/show.php?id=' . $newID));
+}
+
+include(SHARED_PATH . '/salamander-footer.php');
