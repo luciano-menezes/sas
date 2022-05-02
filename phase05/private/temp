@@ -1,0 +1,9 @@
+-- Data Definition Language 
+-- Only works if you have root PRIVILEGES
+-- These two lines only work in MAMP and XAMPP
+CREATE DATABASE IF NOT EXISTS test;
+GRANT ALL PRIVILEGES ON test.* TO 'wbip'@'localhost' IDENTIFIED BY 'wbip123' WITH GRANT OPTION;
+
+USE test;
+
+DROP TABLE IF EXISTS personnel;
